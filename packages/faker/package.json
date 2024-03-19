@@ -1,47 +1,47 @@
 {
-	"name": "@kevinrodbe",
-	"files": [
-		"dist"
-	],
-	"version": "1.0.0",
-	"description": "deploy",
-	"type": "module",
-	"main": "./dist/index.mjs",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/kevinrodbe/kev-ds.git",
-		"directory": "packages/faker"
-	},
-	"exports": {
-		".": {
-			"import": "./dist/index.mjs",
-			"require": "./dist/index.cjs",
-			"types": "./dist/index.d.ts"
-		}
-	},
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
-	},
-	"scripts": {
-		"dev": "unbuild --stub",
-		"build": "unbuild",
-		"test:local": "vitest",
-		"test": "vitest run --coverage",
-		"lint:types": "tsc --noEmit --incremental",
-		"lint:code": "eslint . --cache --cache-strategy content",
-		"lint:code:fix": "eslint . --cache --cache-strategy content --fix",
-		"lint": "concurrently -n lint-types,lint-code -c \"auto\" \"pnpm run lint:types\" \"pnpm run lint:code\"",
-		"lint:fix": "concurrently -n lint-types,lint-code-fix -c \"auto\" \"pnpm run lint:types\" \"pnpm run lint:code:fix\""
-	},
-	"devDependencies": {
-		"@vitest/coverage-v8": "^0.32.2",
-		"concurrently": "^8.2.0",
-		"jsdom": "^22.1.0",
-		"typescript": "^5.1.3",
-		"unbuild": "^1.2.1",
-		"vitest": "^0.32.2"
-	},
-	"dependencies": {}
+  "name": "@kevinrodbe",
+  "files": [
+    "dist"
+  ],
+  "version": "0.1.0",
+  "description": "deploy",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinrodbe/kev-ds.git",
+    "directory": "packages/faker"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "test:local": "vitest",
+    "test": "vitest run --coverage",
+    "lint:types": "tsc --noEmit --incremental",
+    "lint:code": "eslint . --cache --cache-strategy content",
+    "lint:code:fix": "eslint . --cache --cache-strategy content --fix",
+    "lint": "concurrently -n lint-types,lint-code -c \"auto\" \"pnpm run lint:types\" \"pnpm run lint:code\"",
+    "lint:fix": "concurrently -n lint-types,lint-code-fix -c \"auto\" \"pnpm run lint:types\" \"pnpm run lint:code:fix\""
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^0.32.2",
+    "concurrently": "^8.2.0",
+    "jsdom": "^22.1.0",
+    "typescript": "^5.1.3",
+    "unbuild": "^1.2.1",
+    "vitest": "^0.32.2"
+  },
+  "dependencies": {}
 }
