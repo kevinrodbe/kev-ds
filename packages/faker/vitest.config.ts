@@ -15,6 +15,8 @@ export default defineConfig({
 		},
 	},
 	build: {
+		cssCodeSplit: false,
+		cssMinify: 'esbuild',
 		rollupOptions: {
 			output: {
 				assetFileNames: 'myTheme[extname]',
