@@ -1,0 +1,6 @@
+lib
+docs
+test
+azure-pipelines.yml
+*.pipeline.yml
+sonar-scanner.ts

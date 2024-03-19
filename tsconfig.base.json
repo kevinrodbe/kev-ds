@@ -1,0 +1,20 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"noEmit": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"esModuleInterop": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"noUnusedLocals": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"module": "ESNext",
+		"target": "ESNext"
+	}
+}

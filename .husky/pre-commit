@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Recommended commit tool using (pnpm commit or pnpm cz) not properly formated commits will fail ..."
+pnpm pre-commit

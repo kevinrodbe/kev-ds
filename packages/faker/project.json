@@ -1,0 +1,24 @@
+{
+	"$schema": "https://raw.githubusercontent.com/nrwl/nx/master/packages/nx/schemas/project-schema.json",
+	"name": "faker",
+	"projectType": "library",
+	"targets": {
+		"version": {
+			"executor": "@jscutlery/semver:version",
+			"options": {
+				"commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]",
+				"preset": "conventional",
+				"trackDeps": true,
+				"noVerify": true,
+				"allowEmptyRelease": true
+			}
+		},
+		"publish:root": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "packages/faker",
+				"command": "pnpm publish --no-git-checks"
+			}
+		}
+	}
+}

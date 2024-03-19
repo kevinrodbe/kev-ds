@@ -1,0 +1,7 @@
+!nx.json
+!*rc.json
+!*.json
+templates
+plopfile.mjs
+dist/
+docs/
