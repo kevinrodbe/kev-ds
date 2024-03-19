@@ -3,7 +3,7 @@
   "files": [
     "dist"
   ],
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "deploy",
   "type": "module",
   "main": "./dist/index.mjs",
@@ -43,6 +43,5 @@
     "unbuild": "^1.2.1",
     "vitest": "^0.32.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
