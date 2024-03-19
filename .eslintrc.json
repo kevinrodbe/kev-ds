@@ -21,6 +21,7 @@
 			"./tsconfig.json",
 			"./packages/*/tsconfig.eslint.json",
 			"./packages/*/tsconfig.json",
+			"./packages/*/vite.config.ts",
 			"./apps/*/tsconfig.eslint.json",
 			"./apps/*/tsconfig.json"
 		],
