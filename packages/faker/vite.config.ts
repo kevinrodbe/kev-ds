@@ -4,7 +4,7 @@ export default defineConfig({
 	root: __dirname,
 	cacheDir: '../../node_modules/.vite/packages/themes',
 	build: {
-		outDir: '../../dist/packages/themes',
+		outDir: 'dist',
 		reportCompressedSize: true,
 		cssCodeSplit: false,
 		cssMinify: 'esbuild',
