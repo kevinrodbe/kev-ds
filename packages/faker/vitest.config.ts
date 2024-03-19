@@ -14,15 +14,4 @@ export default defineConfig({
 			'@lib': resolve(__dirname, 'src/lib'),
 		},
 	},
-	build: {
-		cssCodeSplit: false,
-		cssMinify: 'esbuild',
-		rollupOptions: {
-			output: {
-				assetFileNames: 'myTheme[extname]',
-			},
-			// External packages that should not be bundled into your library.
-			external: [],
-		},
-	},
 });
