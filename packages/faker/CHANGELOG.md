@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/kevinrodbe/kev-ds/compare/faker-0.1.0...faker-0.2.0) (2024-03-19)
+
+
+### Features
+
+* 2 ([54334b9](https://github.com/kevinrodbe/kev-ds/commit/54334b9147be42951532d4052b1e6dc8ca451d50))
+* merge ([fa9f300](https://github.com/kevinrodbe/kev-ds/commit/fa9f300fd6a868814f62b30f30fc82581da0c7e3))
+
 ## 0.1.0 (2024-03-19)
 
 
