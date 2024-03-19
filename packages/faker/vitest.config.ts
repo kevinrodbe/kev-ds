@@ -12,7 +12,6 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			'@lib': resolve(__dirname, 'src/lib'),
-			'@typings': resolve(__dirname, 'src/typings'),
 		},
 	},
 });
