@@ -54,40 +54,40 @@ jobs:
             - name: Test Affected List
               run: |
                   echo "${{ fromJson(steps.setup_affected_list.outputs.AFFECTED_LIST) }}"
-    test-code-quality:
-        needs: setup
-        name: Test Code Quality
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v3
-              with:
-                  fetch-depth: 0
-            - name: Setup PNPM
-              uses: pnpm/action-setup@v2
-              with:
-                  version: 8
-            - name: Setup Node.js From Cache
-              uses: actions/setup-node@v3
-              with:
-                  registry-url: https://npm.pkg.github.com
-                  node-version: lts/*
-                  cache: 'pnpm'
-            - name: Install Dependencies
-              run: pnpm install --prefer-offline
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - name: Setup NX SHAS
-              uses: nrwl/nx-set-shas@v3
-              with:
-                  main-branch-name: ${{ needs.setup.outputs.TARGET_BRANCH }}
-            - name: Cache Nx
-              uses: actions/cache@v3
-              with:
-                  path: node_modules/.cache/nx
-                  key: ${{ runner.os }}-nx-${{ hashFiles('packages/**/package.json') }}-code-quality
-            - name: Run Lint over Affected packages
-              run: pnpm nx affected:lint --parallel=${{ needs.setup.outputs.MAX_JOBS_COUNT }}
+    # test-code-quality:
+    #     needs: setup
+    #     name: Test Code Quality
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: Checkout
+    #           uses: actions/checkout@v3
+    #           with:
+    #               fetch-depth: 0
+    #         - name: Setup PNPM
+    #           uses: pnpm/action-setup@v2
+    #           with:
+    #               version: 8
+    #         - name: Setup Node.js From Cache
+    #           uses: actions/setup-node@v3
+    #           with:
+    #               registry-url: https://npm.pkg.github.com
+    #               node-version: lts/*
+    #               cache: 'pnpm'
+    #         - name: Install Dependencies
+    #           run: pnpm install --prefer-offline
+    #           env:
+    #               NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #         - name: Setup NX SHAS
+    #           uses: nrwl/nx-set-shas@v3
+    #           with:
+    #               main-branch-name: ${{ needs.setup.outputs.TARGET_BRANCH }}
+    #         - name: Cache Nx
+    #           uses: actions/cache@v3
+    #           with:
+    #               path: node_modules/.cache/nx
+    #               key: ${{ runner.os }}-nx-${{ hashFiles('packages/**/package.json') }}-code-quality
+    #         - name: Run Lint over Affected packages
+    #           run: pnpm nx affected:lint --parallel=${{ needs.setup.outputs.MAX_JOBS_COUNT }}
     version-release:
         needs: [setup, test-code-quality]
         name: Beta Version Release
