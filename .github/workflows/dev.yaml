@@ -89,7 +89,7 @@ jobs:
     #         - name: Run Lint over Affected packages
     #           run: pnpm nx affected:lint --parallel=${{ needs.setup.outputs.MAX_JOBS_COUNT }}
     version-release:
-        needs: [setup, test-code-quality]
+        needs: [setup]
         name: Beta Version Release
         runs-on: ubuntu-latest
         steps:
