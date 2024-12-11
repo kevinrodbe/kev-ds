@@ -123,7 +123,7 @@ jobs:
             - name: Prepare GIT Environment
               run: |
                   git config --global user.name 'github-actions[bot]'
-                  git config --global user.email '41887293+github-actions[bot]@users.noreply.github.com'
+                  git config --global user.email 'github-actions[bot]@users.noreply.github.com'
             - name: Version Bump
               run: pnpm nx affected -t version  --parallel=1
             - name: Build Affected Root Nodes
@@ -135,7 +135,7 @@ jobs:
               if: success()
               run: |
                   git config --global user.name 'github-actions[bot]'
-                  git config --global user.email '41887293+github-actions[bot]@users.noreply.github.com'
+                  git config --global user.email 'github-actions[bot]@users.noreply.github.com'
                   git push origin --follow-tags
             - name: Publish Affected Root Nodes
               if: success()
