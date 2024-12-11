@@ -3,7 +3,7 @@
 	"files": [
 		"dist"
 	],
-	"version": "0.7.2",
+	"version": "0.7.3",
 	"description": "deploy",
 	"type": "module",
 	"main": "./dist/index.mjs",
